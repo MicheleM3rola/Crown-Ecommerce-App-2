@@ -11,7 +11,8 @@ import Header from './components/header/header.component';
 import SignInAndSignUpPage from './Pages/Sign-in-and-sign-up/Sign-in-and-sign-up.component';
 import {auth,createUserProfileDocument} from './firebase/firebase.utils'
 import {setCurrentUser} from './Redux/user/user.action';
-import {selectCurrentUser} from './Redux/user/user.selectors'
+import {selectCurrentUser} from './Redux/user/user.selectors';
+
 
 
 
@@ -38,7 +39,8 @@ class App extends React.Component {
       })
     }
     setCurrentUser(userAuth)
-    })
+    
+    });
   }
 
   componentWillUnmount(){
@@ -64,7 +66,9 @@ class App extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser:selectCurrentUser
+  currentUser:selectCurrentUser,
+  
+
 })
 
 const mapDispatchToProps = dispatch=>({
