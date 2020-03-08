@@ -62,6 +62,11 @@ const config = {
          items
        }
     })
+
+    return transformedCollection.reduce((accum,collection)=>{
+      accum[collection.title.toLowerCase()]=collection;
+      return accum;
+    },{})
   }
 
 
