@@ -1,5 +1,5 @@
 import ShopActionTypes from './shop.type';
-import {firestore, convertCollectionsSnapshotToMap} from '../../firebase/firebase.utils';
+
 
 export const fetchCollectionsStart = ()=>({
 
