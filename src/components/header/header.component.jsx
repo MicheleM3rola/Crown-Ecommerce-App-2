@@ -26,7 +26,7 @@ const Header = ({currentUser,hidden})=>(
     </OptionLink>
     {
         currentUser ? 
-        <OptionDiv onClick={()=> console.log('clicked')}>SIGN OUT</OptionDiv>
+        <OptionDiv onClick={()=> console.log(auth)}>SIGN OUT</OptionDiv>
         :
         <OptionLink to='/signin'>SIGN IN</OptionLink>
 

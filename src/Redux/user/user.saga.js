@@ -20,7 +20,7 @@ export function* getSnapshotFromUserAuth(userAuth){
     }
 }
 
-export function* signInWithGoogle(){
+export function* signInWithGooogle(){
     try{
         const {user} = yield auth.signInWithPopup(googleProvider);
         yield getSnapshotFromUserAuth(user)
@@ -42,7 +42,7 @@ export function* signInWithEmail({payload:{email,password}}){
 }
 
 export function* onGoogleSignInStart(){
-    yield takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START,signInWithGoogle)
+    yield takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START,signInWithGooogle)
 
 }
 
