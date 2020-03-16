@@ -1,4 +1,4 @@
-import {UserActionTypes} from './user.types'
+import UserActionTypes from './user.types'
 
 export const setCurrentUser = user => ({
     type: UserActionTypes.SET_CURRENT_USER,
@@ -20,8 +20,9 @@ export const googleSignInFailure = error=>({
     
 });
 
-export const emailSignInStart = ()=>({
-    type: UserActionTypes.EMAIL_SIGN_IN_START
+export const emailSignInStart = emailAndPassword=>({
+    type: UserActionTypes.EMAIL_SIGN_IN_START,
+    payload:emailAndPassword
 });
 
 export const emailSignInSuccess = user=>({
