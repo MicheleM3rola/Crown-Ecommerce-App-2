@@ -9,8 +9,8 @@ import './sign-up.style.scss';
 
 
 class SignUp extends React.Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
 
 
         this.state={
